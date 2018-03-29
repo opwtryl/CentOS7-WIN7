@@ -1,0 +1,8 @@
+1.使用root身份(必须)打开 /boot/grub2/grub.cfg
+2.找到 ### BEGIN /etc/grub.d/30_os-prober ###
+   在后面添加
+   menuentry "Windows 7" {
+     insmod ntfs
+     set root=(hd0,1)
+     chainloader +1
+   }
