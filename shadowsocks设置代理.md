@@ -26,7 +26,7 @@ terminal 设置代理：
 yum install privoxy
 vim /etc/privoxy/config  # 添加   forward-socks5 / 127.0.0.1:1080 .     注意保留最后那个点号
 
-systemctrl start privoxy.service
+systemctl start privoxy.service
 
 export http_proxy='http://127.0.0.1:8118'
 export https_proxy='http://127.0.0.1:8118'
